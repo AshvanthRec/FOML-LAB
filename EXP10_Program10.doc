@@ -1,0 +1,61 @@
+AIM:
+To perform dimensionality reduction using PCA on the Iris dataset and analyze explained variance.
+
+ALGORITHM:
+1. Standardize the data
+2. Fit PCA with desired components
+3. Examine explained variance ratio
+4. Visualize reduced data
+
+PROGRAM 10 (exact code):
+To implement Dimensionality Reduction using PCA in a python program.
+
+Algorithm:
+
+Step 1: Import Libraries
+Import necessary libraries, including pandas, numpy, matplotlib.pyplot, and
+sklearn.decomposition.PCA.
+
+Step 2: Load the Dataset (iris dataset)
+Load your dataset into a pandas DataFrame.
+
+Step 3: Standardize the Data
+Standardize the features of the dataset using StandardScaler from
+sklearn.preprocessing.
+
+Step 4: Apply PCA
+● Create an instance of PCA with the desired number of components.
+● Fit PCA to the standardized data.
+● Transform the data to its principal components using
+transform. 
+
+Step 5: Explained Variance Ratio
+● Calculate the explained variance ratio for each principal component.
+● Plot a scree plot to visualize the explained variance
+ratio. 
+
+Step 6: Choose the Number of Components
+Based on the scree plot, choose the number of principal components that explain a significant
+amount of variance.
+
+Step 7: Apply PCA with Chosen Components
+Apply PCA again with the chosen number of components.
+
+Step 8: Visualize the Reduced Data
+● Transform the original data to the reduced dimension using the fitted PCA.
+● Visualize the reduced data using a scatter plot.
+
+Step 9: Interpretation
+Interpret the results, considering the trade-offs between dimensionality reduction and information
+loss
+
+Program: dataset [continue with 9.b dataset]
+
+from sklearn import datasets
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+imp
+
+OUTPUT:
+Explained variance: PC1 ≈ 72%, PC2 ≈ 23%, PC3 ≈ 5%

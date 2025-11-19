@@ -1,0 +1,120 @@
+AIM:
+To implement K-Means clustering on Mall Customers and Iris datasets and visualize clusters.
+
+ALGORITHM:
+1. Load dataset
+2. Use Elbow method to find optimal k
+3. Fit KMeans
+4. Plot clusters and centroids
+
+PROGRAM 9 (exact code):
+Mall_Customers.csv')
+X = dataset.iloc[:,[3,4]].values
+print(dataset)
+
+O/P
+
+from sklearn.cluster import KMeans
+wcss =[]
+for i in range (1,11):
+    kmeans = KMeans(n_clusters = i, init = 'k-means++', max_iter =300, n_init = 10, random_state = 0)
+    kmeans.fit(X)
+    wcss.append(kmeans.inertia_)
+# Plot the graph to visualize the Elbow Method to find the optimal number of cluster
+plt.plot(range(1,11),wcss)
+plt.title('The Elbow Method')
+plt.xlabel('Number of clusters')
+plt.ylabel('WCSS')
+plt.show()
+
+O/P
+
+kmeans=KMeans(n_clusters= 5, init = 'k-means++', max_iter = 300, n_init = 10, random_state = 0)
+y_kmeans = kmeans.fit_predict(X)
+y_kmeans
+
+O/P
+
+type(y_kmeans) 
+
+O/P
+
+y_kmeans
+
+O/P
+
+plt.scatter(X[y_kmeans == 0, 0], X[y_kmeans == 0, 1], s = 100, c = 'red', label = 'Cluster 1')
+
+O/P
+
+plt.scatter(X[y_kmeans == 1, 0], X[y_kmeans == 1, 1], s = 100, c = 'blue', label = 'Cluster 2')
+
+O/P
+
+plt.scatter(X[y_kmeans == 2, 0], X[y_kmeans == 2, 1], s = 100, c = 'green', label = 'Cluster
+3')
+
+O/P
+
+plt.sca
+
+k mean - iris.csv
+
+Instruction:
+Aim:
+To implement a python program using a K-Means Algorithm in a model.
+
+Algorithm:
+
+1. Import Necessary Libraries:
+Import required libraries like numpy, matplotlib.pyplot, and sklearn.cluster.
+
+2. Load and Preprocess Data:
+Load the dataset.
+Preprocess the data if needed (e.g., scaling).
+
+3. Initialize Cluster Centers:
+Choose the number of clusters (K).
+Initialize K cluster centers randomly.
+
+4. Assign Data Points to Clusters:
+For each data point, calculate the distance to each cluster center.
+Assign the data point to the cluster with the nearest center.
+
+5. Update Cluster Centers:
+Calculate the mean of the data points in each cluster.
+Update the cluster centers to the calculated means.
+
+6. Repeat Steps 4 and 5:
+Repeat the assignment of data points to clusters and updating of cluster centers until
+convergence (i.e., when the cluster assignments do not change much between iterations).
+
+7. Plot the Clusters:
+Plot the data points and the cluster centers to visualize the clustering result.
+
+Program:
+
+import pandas as pd
+data = pd.read_csv('/content/IRIS.csv')
+data.head(5)
+
+O/P
+
+import numpy as np
+shuffle_index = np.random.permutation(req_data.shape[0])
+#shuffling the row index of our dataset
+req_data = req_data.iloc[shuffle_index]
+req_data.head(5)
+
+O/P
+
+train_size = int(req_data.shape[0]*0.7)
+train_df = req_data.iloc[:train_size,:]
+test_df = req_data.iloc[train_size:,:]
+train = train_df.values
+test = test_df.values
+y_true = test[:,-1]
+print('Train
+
+OUTPUT:
+Elbow method indicates optimal k=5 for Mall dataset; Iris clusters roughly match species with centroids plotted
