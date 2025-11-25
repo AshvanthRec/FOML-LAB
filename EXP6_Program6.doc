@@ -1,16 +1,3 @@
-AIM:
-To apply SVM classification on muffin vs cupcake dataset and plot decision boundaries.
-
-ALGORITHM:
-1. Load recipes_muffins_cupcakes.csv
-2. Extract relevant features
-3. Train linear SVC
-4. Compute hyperplane and margins
-5. Plot data and support vectors
-
-PROGRAM 6 (exact code):
-Program 6
-
 import numpy as np
 import pandas as pd
 from sklearn import svm
@@ -84,8 +71,3 @@ O/P
 print(classification_report(y_test,pred))
 
 O/P
-
-reciepemuffins.csv
-
-OUTPUT:
-Hyperplane plotted; support vectors identified; classification performs well on this dataset
