@@ -1,15 +1,3 @@
-AIM:
-To perform univariate, bivariate and multivariate visualization on the Iris dataset.
-
-ALGORITHM:
-1. Load iris.csv
-2. Split by variety
-3. Plot univariate and bivariate scatter plots
-4. Plot pairplot for multivariate relations
-
-PROGRAM 1 (exact code):
-Program 1
-
 import pandas as pd
 import matplotlib.pyplot as plt 
 import seaborn as sns
@@ -56,10 +44,3 @@ plt.show()
 
 #multivariate all the features
 sns.pairplot(df,hue="variety",size=2)
-
-iris.csv
-
-OUTPUT:
-Sepal width distribution: Setosa mostly between 3.2–4.4
-Sepal length: Virginica shows highest range
-Pairplot: Setosa separable; Versicolor & Virginica overlap
