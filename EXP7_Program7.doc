@@ -1,15 +1,3 @@
-AIM:
-To train decision trees on Iris dataset feature pairs and visualize decision surfaces and full tree.
-
-ALGORITHM:
-1. Load iris dataset
-2. For each pair of features train DecisionTreeClassifier
-3. Plot decision boundaries
-4. Train full tree and plot with plot_tree
-
-PROGRAM 7 (exact code):
-Program 7
-
 from sklearn.datasets import load_iris
 iris = load_iris()
 import numpy as np
@@ -56,6 +44,3 @@ clf = DecisionTreeClassifier().fit(iris.data,iris.target)
 plot_tree(clf, filled=True)
 plt.title("Decision tree trained on all the iris features")
 plt.show()
-
-OUTPUT:
-Decision surfaces for 6 feature-pairs plotted; full decision tree visualized
