@@ -1,16 +1,3 @@
-AIM:
-To implement MLP classifier on Bank Note Authentication dataset with various activations.
-
-ALGORITHM:
-1. Load dataset
-2. Split train/test
-3. Train MLPClassifier with different activation functions
-4. Evaluate using classification report and confusion matrix
-
-PROGRAM 5 (exact code):
-Program 5
-
-
 import pandas as pd
 import numpy as np
 bnotes = pd.read_csv('/content/BankNote_Authentication.csv')
@@ -162,11 +149,3 @@ O/P
 print(classification_report(y_test,pred))
 
 O/P
-
-
-bank note authentication.csv
-
-OUTPUT:
-Accuracy (ReLU) ≈ 0.98
-Accuracy (Logistic) ≈ 0.97
-Accuracy (Tanh) ≈ 0.96
