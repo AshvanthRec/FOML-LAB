@@ -1,16 +1,3 @@
-AIM:
-To implement simple linear regression on HeadBrain dataset and plot regression line.
-
-ALGORITHM:
-1. Load headbrain.csv
-2. Extract Head Size and Brain Weight
-3. Compute slope and intercept
-4. Plot regression line and compute R^2
-
-PROGRAM 2 (exact code):
-Program 2
-
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
@@ -50,10 +37,3 @@ x = x.reshape((len(x),1))
 reg=LinearRegression()
 reg=reg.fit(x, y)
 print(reg.score(x, y))
-
-headbrain.csv
-
-OUTPUT:
-Slope m ≈ 0.26
-Intercept c ≈ 324
-R^2 Score ≈ 0.67
